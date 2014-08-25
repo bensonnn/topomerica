@@ -1,0 +1,18 @@
+{
+  "name": "Grunt-playground",
+  "version": "0.1.0",
+  "homepage": "https://github.com/bensonnn/Grunt-Playground",
+  "authors": [
+    "bensonnn <dan.s.benson@gmail.com>"
+  ],
+  "description": "Just a playground configured with a Connect server and livereload enabled.",
+  "main": "src/index.html",
+  "keywords": [
+    "Grunt",
+    "Bower",
+    "livereload",
+    "Connect"
+  ],
+  "license": "MIT",
+  "private": true
+}
