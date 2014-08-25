@@ -29,12 +29,31 @@ module.exports = function(grunt) {
             files: [ 'Gruntfile.js']
           }
         },
+      },
+      bowerInstall: {
+
+        target: {
+
+          src: [
+            'src/index.html'  // .html support...
+          ],
+
+          // Optional:
+          // ---------
+          cwd: '',
+          dependencies: true,
+          devDependencies: false,
+          exclude: [],
+          fileTypes: {},
+          ignorePath: '',
+          overrides: {}
+        }
       }
   });
 
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('connect-livereload');
+  grunt.loadNpmTasks('grunt-bower-install');
 
   // Default task(s).
   grunt.registerTask('dev', ['connect', 'watch']);
