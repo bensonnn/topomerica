@@ -7,6 +7,7 @@
   ],
   "description": "Just a playground configured with a Connect server and livereload enabled.",
   "main": "src/index.html",
+  "directory": "src/",
   "keywords": [
     "Grunt",
     "Bower",

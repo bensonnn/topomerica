@@ -48,13 +48,27 @@ module.exports = function(grunt) {
           ignorePath: '',
           overrides: {}
         }
-      }
+      },
+      shell: {                            
+        install: {                  
+          options: {                  
+              stderr: false
+          },
+          command: function(package) {
+            return 'bower install ' + package + ' --save'
+          } 
+        }
+    }
   });
 
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-bower-install');
+  grunt.loadNpmTasks('grunt-shell');
 
   // Default task(s).
   grunt.registerTask('dev', ['connect', 'watch']);
+  grunt.registerTask('install', function(arg){
+    grunt.task.run(['shell:install:' + arg, 'bowerInstall'])
+  })
 };
