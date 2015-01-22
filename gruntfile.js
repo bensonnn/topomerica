@@ -1,6 +1,6 @@
 module.exports = function(grunt) {
 
-  var LIVERELOAD_PORT = 35729
+  var LIVERELOAD_PORT = 35728
 
   // Project configuration.
   grunt.initConfig({
@@ -67,7 +67,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-shell');
 
   // Default task(s).
-  grunt.registerTask('dev', ['connect', 'watch']);
+  grunt.registerTask('default', ['connect', 'watch']);
   grunt.registerTask('install', function(arg){
     grunt.task.run(['shell:install:' + arg, 'bowerInstall'])
   })
