@@ -1,6 +1,6 @@
 Grunt Playground
 =========
-This is a super-small boilerplate project for quick code testing.  It makes use of Grunt with livereload to make developing and testing dependencies simple and fast.
+Grunt Playground a micro-framework for fun and fast development, whether you're testing new libraries or building something yourself.  It makes use of Grunt with livereload to make developing and importing dependencies simple and fast.
 
 
 Firstly, install Grunt
