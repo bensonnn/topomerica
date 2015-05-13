@@ -1,0 +1,18 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/work\/Projects\/topo\/src\/css\/main\.scss}line{font-family:\000032}}
+.land {
+  fill: #222;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/work\/Projects\/topo\/src\/css\/main\.scss}line{font-family:\000036}}
+.county-boundary {
+  fill: none;
+  stroke: gray;
+  stroke-width: .5px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/work\/Projects\/topo\/src\/css\/main\.scss}line{font-family:\0000312}}
+.state-boundary {
+  fill: none;
+  stroke: gray;
+  stroke-width: .5px;
+}
