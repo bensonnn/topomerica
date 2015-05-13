@@ -11,7 +11,7 @@
   var path = d3.geo.path()
       .projection(projection);
 
-  var svg = d3.select("body").append("svg")
+  var svg = d3.select(".usa").append("svg")
       .attr("width", width)
       .attr("height", height);
 
@@ -19,11 +19,28 @@
 
   var features = topojson.feature( us, us.objects.usa).features;
 
-  var states = group.selectAll('states').data(features)
+  _.each(features, function(f) {
+    f.properties.active = (!!Math.round(Math.random()))
+  })
+
+  var states = group.selectAll('.state').data(features)
 
   states.enter()
   .append('path')
-  .attr('d', function(d) {console.log(d);return path(d.geometry)})
+  .attr('d', function(d) {return path(d.geometry)})
+  .attr('class', 'state')
+  .classed("active", function(d) {return d.properties.active})
+  .on('click', function(d, e) {
+    d3.select(this).classed("active", !d3.select(this).classed("active"))
+  })
+
+  .attr('title', function(d) {return d.properties.name})
+  .each(function(d) {
+    $(this).tooltip({
+      container: '.usa',
+      placement: 'right',
+    })
+  })
 
 
 })();

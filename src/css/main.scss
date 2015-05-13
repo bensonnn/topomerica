@@ -1,16 +1,14 @@
-
-.land {
-  fill: #222;
-}
-
-.county-boundary {
-  fill: none;
-  stroke: gray;
-  stroke-width: .5px;
-}
-
-.state-boundary {
-  fill: none;
-  stroke: gray;
-  stroke-width: .5px;
+.state {
+  fill: #E1E1E1;
+  stroke: #fff;
+  stroke-width: 1.5;
+  &:hover {
+    fill: #FDDEA3;
+  };
+  &.active {
+    fill: #F7931E;
+  }
+  &.disabled {
+    fill: #FDDEA3;
+  }
 }
