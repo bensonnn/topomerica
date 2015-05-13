@@ -15,5 +15,10 @@
     "Connect"
   ],
   "license": "MIT",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "d3": "~3.5.5",
+    "topojson": "~1.6.19",
+    "jquery": "~2.1.4"
+  }
 }
